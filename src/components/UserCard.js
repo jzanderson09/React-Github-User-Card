@@ -1,9 +1,12 @@
 import React from 'react';
 import { Card }  from 'react-bootstrap';
 
-const UserData = props => {
+import UserRepos from './UserRepos';
+import UserFollowers from './UserFollowers';
+
+const UserCard = props => {
     return (
-        <div className='myUserData-container'>
+        <div className='UserCard-container'>
             <Card style={{ width: '18rem' }}>
                 <Card.Title>{props.user.name}</Card.Title>
                 <img 
@@ -15,9 +18,15 @@ const UserData = props => {
                     href={`${props.user.html_url}?tab=repositories`}
                     target='_blank'
                 >{props.user.login}</Card.Link>
+                <UserRepos 
+                    repos={props.repos}
+                />
+                <UserFollowers 
+                    followers={props.followers}
+                />
             </Card>
         </div>
     );
 };
 
-export default UserData;
+export default UserCard;
