@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
 
+import UserData from './components/UserData';
+
 class App extends Component {
   constructor() {
     super();
@@ -21,6 +23,9 @@ class App extends Component {
       <div className="App">
         <h1>App!</h1>
         <div className='App-container'>
+          <UserData 
+            user={this.state.userData}
+          />
         </div>
       </div>
     );
