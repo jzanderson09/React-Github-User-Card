@@ -1,11 +1,11 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
-import './UserFollowing.css';
+import './UserFollowing.scss';
 
 const UserFollowing = props => {
     return (
         <div className='UserFollowing-container'>
-                        <h1>{`Following (${props.followingCount}):`}</h1>
+            <h1>{`Following (${props.followingCount}):`}</h1>
             {props.following.map(followingUser => {
                 return (
                     <div 

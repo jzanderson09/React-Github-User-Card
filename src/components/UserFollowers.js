@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
-import './UserFollowers.css';
+import './UserFollowers.scss';
 
 const UserFollowers = props => {
     return (

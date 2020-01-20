@@ -1,0 +1,42 @@
+.UserCard-container {
+    width: 90%;
+    height: auto;
+    border: 2px solid black;
+    border-radius: 1%;
+    margin: 2% auto 1%;
+    background: black;
+
+    .card {
+        border: 1px solid white;
+        border-radius: 50%;
+        background: white;
+
+        .card-title {
+            padding: 1%;
+        }
+
+        .profile-photo {
+            border: 1px solid black;
+            border-radius: 10%;
+            box-shadow: 10px 10px 10px black;
+            width: 18rem;
+            height: auto;
+            margin: auto auto 1%;
+        }
+
+        .github-handle {
+            color: black;
+            border: 1px solid black;
+            border-radius: 10%;
+            width: 20%;
+            margin: 2% auto 1%;
+            padding: 2%;
+            font-size: 1.08rem;
+        }
+
+        .github-handle:hover {
+            background: black;
+            color: white;
+        }
+    }
+}

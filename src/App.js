@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import './App.css';
+import './App.scss';
 import UserCard from './components/UserCard';
 import UserRepos from './components/UserRepos';
 import UserFollowers from './components/UserFollowers';
