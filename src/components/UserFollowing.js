@@ -1,32 +1,32 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
-import './UserFollowers.css';
+import './UserFollowing.css';
 
-const UserFollowers = props => {
+const UserFollowing = props => {
     return (
-        <div className='UserFollowers-container'>
-            <h1>{`Followers (${props.followerCount}):`}</h1>
-            {props.followers.map(follower => {
+        <div className='UserFollowing-container'>
+                        <h1>{`Following (${props.followingCount}):`}</h1>
+            {props.following.map(followingUser => {
                 return (
                     <div 
-                        className='follower' 
-                        key={follower.id}
-                        onClick={() => props.changeUser(follower.login)}
+                        className='user-following' 
+                        key={followingUser.id}
+                        onClick={() => props.changeUser(followingUser.login)}
                     >
                         <Card 
                             style={{ width: '18rem' }}
                         >
                             <img 
-                                src={follower.avatar_url}
+                                src={followingUser.avatar_url}
                                 className='thumbnail'
                                 alt='user profile thumbnail'
                             ></img>
                             Github: 
                             <Card.Link
                                 className='follower-link'
-                                href={follower.html_url}
+                                href={followingUser.html_url}
                                 target='_blank'
-                            >{follower.login}</Card.Link>
+                            >{followingUser.login}</Card.Link>
                         </Card>
                     </div>
                 );
@@ -35,4 +35,4 @@ const UserFollowers = props => {
     );
 };
 
-export default UserFollowers;
+export default UserFollowing;
